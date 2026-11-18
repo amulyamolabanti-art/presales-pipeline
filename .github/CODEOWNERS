@@ -1,0 +1,28 @@
+# ==============================================================================
+# Global Fallback (Tech Lead)
+# ==============================================================================
+*                       karthik.valluri@ascendion.com
+
+# ==============================================================================
+# Track A Ownership (Agents, Orchestrator, Prompts, Eval, DB, Samples)
+# Lead: Surendra Reddy (surendra.reddy@ascendion.com)
+# ==============================================================================
+/src/orchestrator/      @surendrareddy-alt surendra.reddy@ascendion.com
+/prompts/               @surendrareddy-alt surendra.reddy@ascendion.com
+/eval/                  @surendrareddy-alt surendra.reddy@ascendion.com
+/db/                    @surendrareddy-alt surendra.reddy@ascendion.com
+/samples/               @surendrareddy-alt surendra.reddy@ascendion.com
+
+# ==============================================================================
+# Track B Ownership (Infra, Bot, Tab)
+# Lead: Charishma M (charishma.m@ascendion.com)
+# ==============================================================================
+/infra/                 charishma.m@ascendion.com
+/src/bot/               charishma.m@ascendion.com
+/src/tab/               charishma.m@ascendion.com
+
+# ==============================================================================
+# Shared Ownership
+# ==============================================================================
+/contracts/             @surendrareddy-alt charishma.m@ascendion.com
+/.github/               karthik.valluri@ascendion.com

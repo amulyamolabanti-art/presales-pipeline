@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://presales.ascendion.com/schemas/dashboard.schema.json",
+  "title": "ProposalDashboardContract",
+  "description": "Data contract for Proposal Assistant Dashboard. Maps every field to SQL schema (S0-LY-02), agent output (S0-CM-02), or 'TBD with Srigopal'.",
+  "type": "object",
+  "properties": {
+    "opportunityId": {
+      "type": "string",
+      "description": "Unique identifier for the proposal bid.",
+      "pattern": "^OPP-[0-9]{4}-[0-9A-Za-z_-]+$",
+      "$comment": "source: SQL table Opportunity.opportunityId"
+    },
+    "opportunityMetadata": {
+      "type": "object",
+      "description": "Header proposal details.",
+      "properties": {
+        "clientName": { "type": "string", "$comment": "source: SQL table Opportunity.clientName" },
+        "bidTitle": { "type": "string", "$comment": "source: SQL table Opportunity.bidTitle" },
+        "circle": { "type": "string", "$comment": "source: SQL table Opportunity.circle" },
+        "status": { "type": "string", "enum": ["Active", "Won", "Lost", "Paused"], "$comment": "source: SQL table Opportunity.status" },
+        "bidOwnerEmail": { "type": "string", "format": "email", "$comment": "source: SQL table Opportunity.bidOwnerEmail" },
+        "dueDate": { "type": "string", "format": "date-time", "$comment": "source: SQL table Opportunity.dueDate" }
+      },
+      "required": ["clientName", "bidTitle", "circle", "status", "bidOwnerEmail", "dueDate"]
+    },
+    "kpis": {
+      "type": "object",
+      "description": "Key performance indicators displayed at top of dashboard.",
+      "properties": {
+        "completenessScore": { "type": "number", "minimum": 0.0, "maximum": 100.0, "$comment": "source: Agent IntakeAgentOutput.summary.completeness_score" },
+        "mandatoryRequirementsTotal": { "type": "integer", "minimum": 0, "$comment": "source: Agent IntakeAgentOutput.summary.mandatory_count" },
+        "mandatoryRequirementsCovered": { "type": "integer", "minimum": 0, "$comment": "source: Agent ComplianceAgentOutput.covered_count" },
+        "openGapsCount": { "type": "integer", "minimum": 0, "$comment": "source: SQL table Gap (COUNT where status = 'Open') / Agent ComplianceAgentOutput.gap_count" },
+        "compliancePercentage": { "type": "number", "minimum": 0.0, "maximum": 100.0, "$comment": "source: Agent ComplianceAgentOutput.coverage_percentage" },
+        "estimatedValue": { "type": "string", "$comment": "source: TBD with Srigopal" },
+        "winProbability": { "type": "string", "$comment": "source: TBD with Srigopal" }
+      },
+      "required": [
+        "completenessScore",
+        "mandatoryRequirementsTotal",
+        "mandatoryRequirementsCovered",
+        "openGapsCount",
+        "compliancePercentage"
+      ]
+    },
+    "progress": {
+      "type": "object",
+      "description": "Lifecycle progression and stage audit history.",
+      "properties": {
+        "currentStage": {
+          "type": "string",
+          "enum": ["New", "In analysis", "Drafting", "Awaiting SME", "In approval", "Submitted"],
+          "$comment": "source: SQL table Opportunity.currentStage"
+        },
+        "stageHistory": {
+          "type": "array",
+          "$comment": "source: SQL table StageHistory",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stage": { "type": "string" },
+              "status": { "type": "string", "enum": ["Started", "Completed", "Paused", "Rejected"] },
+              "updatedBy": { "type": "string" },
+              "notes": { "type": "string" },
+              "timestamp": { "type": "string", "format": "date-time" }
+            },
+            "required": ["stage", "status", "updatedBy", "timestamp"]
+          }
+        }
+      },
+      "required": ["currentStage", "stageHistory"]
+    },
+    "analysisCards": {
+      "type": "array",
+      "description": "Summary cards for each analytical domain.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cardId": { "type": "string", "$comment": "source: TBD with Srigopal" },
+          "title": { "type": "string", "$comment": "source: TBD with Srigopal" },
+          "domain": { "type": "string", "enum": ["Technical", "Security", "Commercial", "Delivery", "Legal"], "$comment": "source: SQL table Requirement.category / Agent IntakeAgentOutput" },
+          "status": { "type": "string", "enum": ["Verified", "Needs Review", "In Progress", "Gaps Identified"], "$comment": "source: Agent ComplianceAgentOutput.compliance_status" },
+          "summaryText": { "type": "string", "$comment": "source: Agent DraftingAgentOutput.draft_text excerpt" },
+          "itemsCount": { "type": "integer", "$comment": "source: SQL table Requirement (COUNT by category)" },
+          "actionNeeded": { "type": "string", "$comment": "source: Agent ComplianceAgentOutput.mandatory_gaps[].recommended_action" }
+        },
+        "required": ["cardId", "title", "domain", "status", "summaryText"]
+      }
+    },
+    "alerts": {
+      "type": "array",
+      "description": "Actionable notifications and alerts.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alertId": { "type": "string", "$comment": "source: SQL table ActionItem.actionId" },
+          "severity": { "type": "string", "enum": ["Critical", "Warning", "Info"], "$comment": "source: TBD with Srigopal" },
+          "message": { "type": "string", "$comment": "source: SQL table ActionItem.title / Agent ComplianceAgentOutput" },
+          "targetRole": { "type": "string", "$comment": "source: Agent ComplianceAgentOutput.mandatory_gaps[].assigned_role" },
+          "assignedTo": { "type": "string", "$comment": "source: SQL table ActionItem.assignedToEmail" }
+        },
+        "required": ["alertId", "severity", "message"]
+      }
+    },
+    "quickLinks": {
+      "type": "array",
+      "description": "Referenced documents, RFP raw sources, and export artifacts.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string", "$comment": "source: SQL table Document.docType" },
+          "fileName": { "type": "string", "$comment": "source: SQL table Document.fileName" },
+          "url": { "type": "string", "$comment": "source: SQL table Document.storageUrl / Agent PublishingAgentOutput.target_artifacts[].outputFileName" },
+          "fileType": { "type": "string", "enum": ["PDF", "DOCX", "PPTX", "XLSX"], "$comment": "source: SQL table Document.fileType" }
+        },
+        "required": ["label", "fileName", "url"]
+      }
+    }
+  },
+  "required": [
+    "opportunityId",
+    "opportunityMetadata",
+    "kpis",
+    "progress",
+    "analysisCards",
+    "alerts",
+    "quickLinks"
+  ],
+  "additionalProperties": false
+}

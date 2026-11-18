@@ -1,0 +1,28 @@
+{
+  "proposal_metadata": {
+    "opportunity_id": "OPP-2026-042",
+    "client_name_placeholder": "[CLIENT_NAME]",
+    "submission_deadline": "2026-11-15",
+    "bid_owner": "Rukul Singh",
+    "version": "1.0"
+  },
+  "executive_summary_brief": [
+    "Azure-native architecture eliminates integration risk and accelerates onboarding.",
+    "Enterprise-grade security: AES-256, TLS 1.3, AAD SSO — all exceeding RFP minimums.",
+    "Proven in regulated-industry deployments with zero critical incidents in 12 months.",
+    "Teams-native notifications reduce operational overhead for distributed teams.",
+    "Competitive per-user SaaS pricing with a fixed-price implementation option."
+  ],
+  "approved_sections": [
+    {
+      "section_title": "2.1 Security & Identity Management",
+      "domain": "Security",
+      "draft_text": "The [COMPANY_NAME] platform provides enterprise-grade identity management through native Azure Active Directory (AAD) integration, enforcing single sign-on (SSO) for all users via SAML 2.0 and OpenID Connect [Ref: P-2025-017]. This approach eliminates password sprawl and ensures that access control is centralised within the client's existing identity infrastructure.\n\nData security is maintained at every layer: all data at rest is protected using AES-256 encryption with keys managed in Azure Key Vault, and all data in transit is secured with TLS 1.3 and HTTP Strict Transport Security (HSTS) enforcement [Ref: P-2024-009]. This configuration exceeds the minimum encryption standards stipulated in the RFP.\n\nAdditionally, the platform delivers real-time operational notifications directly within Microsoft Teams via Adaptive Cards [Ref: P-2025-017], providing the client's teams with immediate visibility into critical events without requiring context-switching to external tools."
+    },
+    {
+      "section_title": "3.1 Pricing & Commercial Terms",
+      "domain": "Commercial",
+      "draft_text": "Pricing is structured on a transparent per-user, per-month SaaS basis, enabling [CLIENT_NAME] to scale costs directly with adoption. A fixed-price implementation package is available for the initial onboarding phase, providing budget certainty from day one. Volume tiers and multi-year commitment discounts are detailed in Appendix A — Commercial Schedule."
+    }
+  ]
+}

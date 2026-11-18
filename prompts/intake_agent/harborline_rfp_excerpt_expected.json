@@ -1,0 +1,81 @@
+{
+  "requirements": [
+    {
+      "id": 1,
+      "section": "Section: 5.1 Functional Requirements",
+      "requirement_text": "FR-01: Policyholders and agents can report a new claim (FNOL) through a responsive web and mobile experience.",
+      "classification": "mandatory",
+      "domain": "Technical"
+    },
+    {
+      "id": 2,
+      "section": "Section: 5.1 Functional Requirements",
+      "requirement_text": "FR-02: FNOL accepts photos and documents of up to 25 MB per file, with a virus scan before storage.",
+      "classification": "mandatory",
+      "domain": "Technical"
+    },
+    {
+      "id": 3,
+      "section": "Section: 5.1 Functional Requirements",
+      "requirement_text": "FR-03: The triage service assigns each new claim a severity score and a recommended handling route.",
+      "classification": "mandatory",
+      "domain": "Technical"
+    },
+    {
+      "id": 4,
+      "section": "Section: 5.1 Functional Requirements",
+      "requirement_text": "FR-07: Adjuster workbench with configurable work queues, diary tasks and supervisor dashboards.",
+      "classification": "optional",
+      "domain": "Technical"
+    },
+    {
+      "id": 5,
+      "section": "Section: 5.1 Functional Requirements",
+      "requirement_text": "FR-08: FNOL available in English and Spanish.",
+      "classification": "optional",
+      "domain": "Technical"
+    },
+    {
+      "id": 6,
+      "section": "Section: 5.1 Functional Requirements",
+      "requirement_text": "FR-09: Conversational assistant that answers 'where is my claim?' questions on the web and by SMS.",
+      "classification": "optional",
+      "domain": "Technical"
+    },
+    {
+      "id": 7,
+      "section": "Section: 5.2 Non-Functional Requirements",
+      "requirement_text": "NFR-01: Hosted on Microsoft Azure in United States regions only. No claims data outside the United States.",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 8,
+      "section": "Section: 5.2 Non-Functional Requirements",
+      "requirement_text": "NFR-02: FNOL availability of 99.9% per calendar month, excluding agreed maintenance windows.",
+      "classification": "mandatory",
+      "domain": "Delivery"
+    },
+    {
+      "id": 9,
+      "section": "Section: 5.2 Non-Functional Requirements",
+      "requirement_text": "NFR-03: The vendor holds a current SOC 2 Type II report covering the services proposed.",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 10,
+      "section": "Section: 5.2 Non-Functional Requirements",
+      "requirement_text": "NFR-06: Data encrypted in transit (TLS 1.2 or higher) and at rest with customer-managed keys.",
+      "classification": "mandatory",
+      "domain": "Security"
+    }
+  ],
+  "summary": {
+    "total_requirements": 10,
+    "mandatory_count": 7,
+    "optional_count": 3,
+    "unclear_count": 0,
+    "completeness_score": 100
+  }
+}

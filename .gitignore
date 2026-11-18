@@ -1,0 +1,57 @@
+# Environment & secrets
+.env
+.env.*
+*.env
+!.env.example
+!*.env.example
+env/.env.*.user
+!env/.env.local
+!env/.env.playground
+!env/.env.dev
+local.settings.json
+
+# Azurite (local Azure storage emulator files)
+__azurite_db_*.json
+__blobstorage__/
+__queuestorage__/
+__tablestorage__/
+*azurite*
+
+# Certificates & local SSL keys (do not commit private keys)
+*.pem
+*.key
+*.crt
+*.cert
+.cert/
+.certs/
+
+# Dependencies & build outputs
+node_modules/
+dist/
+build/
+bin/
+obj/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vite/
+
+# Teams Toolkit devTools
+devTools/
+
+# IDE & OS files (track launch, tasks & settings for team onboarding)
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+.idea/
+Thumbs.db
+.DS_Store
+
+# Local SharePoint directory exports & local database (contains internal emails; never commit per AI_CODING_RULES.md)
+local_sharepoint_data/
+data/
+*.xlsx
+*.bak.xlsx
+*.tmp.xlsx

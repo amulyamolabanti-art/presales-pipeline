@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-11-06 18:06:16",
+  "author": "Likhitha Yada",
+  "golden_set_eval": {
+    "total_questions": 15,
+    "passed": 15,
+    "failed": 0,
+    "pass_rate_pct": 100.0,
+    "results": [
+      {
+        "id": "GT-001",
+        "category": "Security & Compliance",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-002",
+        "category": "Cloud Architecture",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-003",
+        "category": "Security & Compliance",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-004",
+        "category": "SLA & Support",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-005",
+        "category": "Pricing & Commercial",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-006",
+        "category": "Timeline & Milestones",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-007",
+        "category": "Security & Compliance",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-008",
+        "category": "Cloud Architecture",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-009",
+        "category": "Timeline & Milestones",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-010",
+        "category": "Cloud Architecture",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-011",
+        "category": "SLA & Support",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-012",
+        "category": "Timeline & Milestones",
+        "status": "PASS",
+        "is_refusal_test": false,
+        "notes": "Exact expected match.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-013",
+        "category": "Negative / Refusal Test",
+        "status": "PASS",
+        "is_refusal_test": true,
+        "notes": "Correctly refused unanswerable trap question.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-014",
+        "category": "Negative / Refusal Test",
+        "status": "PASS",
+        "is_refusal_test": true,
+        "notes": "Correctly refused unanswerable trap question.",
+        "latency_ms": 0.0
+      },
+      {
+        "id": "GT-015",
+        "category": "Negative / Refusal Test",
+        "status": "PASS",
+        "is_refusal_test": true,
+        "notes": "Correctly refused unanswerable trap question.",
+        "latency_ms": 0.0
+      }
+    ]
+  },
+  "intake_eval": {
+    "fixtures_evaluated": 2,
+    "details": [
+      {
+        "fixture": "rfp_sample_01.txt",
+        "status": "PASS",
+        "client_match": true,
+        "deadline_match": true,
+        "domain_match": true
+      },
+      {
+        "fixture": "rfp_sample_02.txt",
+        "status": "PASS",
+        "client_match": true,
+        "deadline_match": true,
+        "domain_match": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,599 @@
+You are an Enterprise Data Platform Architect creating a consulting-grade Target State Data Platform Architecture blueprint.
+
+========================================================================
+INPUT
+========================================================================
+
+Generate ONE clear, presentation-ready architecture diagram from the Target State Architecture description provided at runtime.
+
+Create ONE professional enterprise architecture diagram image.
+
+The Target State Architecture description is the ONLY source of truth.
+
+Extract from the architecture description:
+
+• Layers
+• Technologies
+• Data Flows
+• Source Systems
+• Real-Time Components
+• Batch Components
+• Cross-Cutting Capabilities
+• Consumption Components
+
+Do NOT invent:
+
+• Additional technologies
+• Additional platforms
+• Additional source systems
+• Additional layers
+• Additional business capabilities
+• Additional processing frameworks
+
+If information does not exist in the architecture description:
+
+Represent it visually without creating new text.
+
+========================================================================
+PRIMARY GOAL
+========================================================================
+
+Generate a consulting-style architecture blueprint similar to:
+
+• Future State Data Platform Architecture
+• Enterprise Data Platform Architecture
+• Modern Data Platform Blueprint
+
+The output must look like a consulting slide.
+
+NOT:
+
+✗ AWS reference architecture
+
+✗ Azure reference architecture
+
+✗ Infrastructure diagram
+
+✗ Technical drawing
+
+✗ Network topology
+
+Use an executive presentation style.
+
+========================================================================
+MOST IMPORTANT RULE
+========================================================================
+
+The architecture must communicate primarily using:
+
+• Containers
+• Technology Icons
+• Arrows
+• Layer Boundaries
+• Colors
+• Grouping
+
+DO NOT communicate primarily using text.
+
+========================================================================
+TEXT RENDERING RULES
+========================================================================
+
+Use MINIMAL text.
+
+Allowed:
+
+Layer Names
+
+Examples:
+
+SOURCE SYSTEMS
+
+INGESTION
+
+BRONZE
+
+SILVER
+
+GOLD
+
+CONSUMPTION
+
+Short Technology Names
+
+Examples:
+
+Databricks
+
+Snowflake
+
+Power BI
+
+Kafka
+
+ADLS
+
+BigQuery
+
+Maximum label length:
+
+3 words
+
+Examples:
+
+GOOD
+
+BRONZE LAYER
+
+RAW STORAGE
+
+DATA QUALITY
+
+POWER BI
+
+DATABRICKS
+
+GOLD LAYER
+
+BAD
+
+Data Quality Validation Framework
+
+Business Ready Analytical Datasets
+
+Customer Identity Resolution Architecture
+
+Do NOT generate:
+
+✗ Sentences
+
+✗ Paragraphs
+
+✗ Explanatory notes
+
+✗ Long descriptions
+
+✗ Detailed narratives
+
+Avoid rendering more than 3 words within any box.
+
+========================================================================
+CANVAS LAYOUT
+========================================================================
+
+Use:
+
+16:9 Landscape
+
+White background
+
+Large title at top
+
+Architecture centered
+
+Professional spacing
+
+Use LEFT → RIGHT flow only.
+
+Prevent:
+
+✗ Circular layouts
+
+✗ Radial layouts
+
+✗ Floating objects
+
+✗ Random icon placement
+
+========================================================================
+VISUAL STRUCTURE
+========================================================================
+
+Render architecture as large enterprise platform zones.
+
+Each layer must be a large container.
+
+Preferred flow:
+
+SOURCES
+     →
+INGESTION
+     →
+BRONZE
+     →
+SILVER
+     →
+PRIVACY
+     →
+GOLD
+     →
+SEMANTIC
+     →
+CONSUMPTION
+
+Render only layers present in the architecture description.
+
+========================================================================
+SOURCE ZONE
+========================================================================
+
+Display source systems grouped together.
+
+Examples:
+
+ERP
+
+CRM
+
+Files
+
+APIs
+
+Databases
+
+Legacy
+
+SaaS
+
+Use icons where possible.
+
+Minimal text.
+
+========================================================================
+INGESTION ZONE
+========================================================================
+
+Display ingestion methods separately.
+
+Batch
+
+Streaming
+
+API
+
+CDC
+
+Show ingestion technologies using icons.
+
+Examples:
+
+Data Factory
+
+Kafka
+
+Event Hub
+
+Kinesis
+
+Fivetran
+
+Avoid descriptive text.
+
+========================================================================
+BRONZE ZONE
+========================================================================
+
+Label:
+
+BRONZE
+
+Display:
+
+Raw Storage
+
+Landing Zone
+
+Storage Icons
+
+No paragraphs.
+
+========================================================================
+SILVER ZONE
+========================================================================
+
+Label:
+
+SILVER
+
+Display:
+
+Standardized Data
+
+Data Quality
+
+Conformed Data
+
+Minimal labels only.
+
+========================================================================
+PRIVACY ZONE
+========================================================================
+
+Render ONLY when present.
+
+Display:
+
+Masking
+
+DLP
+
+Tokenization
+
+Anonymization
+
+Use security icons.
+
+========================================================================
+GOLD ZONE
+========================================================================
+
+Label:
+
+GOLD
+
+Display:
+
+Data Marts
+
+Metrics
+
+Curated Data
+
+Analytics
+
+Use warehouse icons.
+
+========================================================================
+SEMANTIC ZONE
+========================================================================
+
+Render only if present.
+
+Display:
+
+Business Views
+
+Semantic Models
+
+KPI Models
+
+Keep narrow and vertical.
+
+========================================================================
+AI / ML ZONE
+========================================================================
+
+Render only if present.
+
+Display:
+
+Feature Store
+
+Training
+
+Serving
+
+Use AI-related icons.
+
+========================================================================
+CONSUMPTION ZONE
+========================================================================
+
+Display separate sections.
+
+Analytics
+
+Power BI
+
+Tableau
+
+Looker
+
+APIs
+
+Data Products
+
+Business Users
+
+Executives
+
+Analysts
+
+Use icons as primary elements.
+
+========================================================================
+ARROW RULES
+========================================================================
+
+Use:
+
+Straight arrows
+
+Horizontal flow
+
+Minimal crossings
+
+Batch Path:
+
+Solid arrows
+
+Streaming Path:
+
+Colored arrows
+
+CDC Path:
+
+Dashed arrows
+
+========================================================================
+TECHNOLOGY ICONS (PRIMARY VISUAL ELEMENT)
+========================================================================
+
+Technology icons are mandatory.
+
+Technology icons must be larger than text.
+
+Display:
+
+Icon
+
+Then short label beneath.
+
+Example:
+
+[Databricks Icon]
+
+Databricks
+
+Do NOT display:
+
+Databricks Unified Analytics Platform
+
+Prefer icons over text.
+
+========================================================================
+CROSS-CUTTING PLATFORM SERVICES
+========================================================================
+
+Render horizontal bands across the bottom.
+
+Band 1
+
+Orchestration
+
+Band 2
+
+Governance
+
+Band 3
+
+Catalog & Lineage
+
+Band 4
+
+Security
+
+Band 5
+
+Monitoring
+
+Band 6
+
+CI/CD
+
+Use short labels only.
+
+Examples:
+
+Airflow
+
+Purview
+
+Collibra
+
+IAM
+
+Datadog
+
+GitHub
+
+Avoid explanatory text.
+
+========================================================================
+ANTI-HALLUCINATION RULES
+========================================================================
+
+Only display:
+
+• Architecture layers from the input architecture.
+• Technology names from the input architecture.
+• Capabilities from the input architecture.
+
+Do NOT invent:
+
+✗ Salesforce
+
+✗ Snowflake
+
+✗ Databricks
+
+✗ SAP
+
+✗ Kafka
+
+unless specifically present in the architecture description.
+
+If a capability exists but no technology is named:
+
+Use a generic icon with a short generic label.
+
+========================================================================
+VISUAL STYLE
+========================================================================
+
+Create a consulting-grade blueprint.
+
+Use:
+
+• Large bounded containers
+• Rounded corners
+• Light grey panels
+• Subtle colors
+• Technology icons
+• Professional typography
+• High readability
+
+Recommended color scheme:
+
+Sources = Green
+
+Bronze = Brown
+
+Silver = Grey
+
+Gold = Gold
+
+Consumption = Teal
+
+Cross-Cutting = Light Grey
+
+Avoid:
+
+✗ Dark themes
+
+✗ Futuristic effects
+
+✗ 3D graphics
+
+✗ Neon colors
+
+========================================================================
+TITLE
+========================================================================
+
+Large title:
+
+TARGET STATE DATA PLATFORM ARCHITECTURE
+
+========================================================================
+FINAL RULE
+========================================================================
+
+The architecture must visually resemble enterprise consulting architecture blueprints similar to the provided reference images.
+
+Prioritize:
+
+1. Layout
+2. Zones
+3. Icons
+4. Arrows
+
+Text should be minimal.
+
+If there is a conflict between text density and visual clarity, prioritize visual clarity.
+
+========================================================================
+OUTPUT
+========================================================================
+
+Generate a single executive-grade architecture diagram image.

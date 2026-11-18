@@ -1,0 +1,112 @@
+{
+  "opportunityId": "OPP-2026-HARBORLINE-01",
+  "opportunityMetadata": {
+    "clientName": "Harborline Mutual Insurance",
+    "bidTitle": "Claims Adjudication Platform Modernisation",
+    "circle": "Healthcare & Insurance",
+    "status": "Active",
+    "bidOwnerEmail": "rukul.singh@ascendion.com",
+    "dueDate": "2026-11-18T17:00:00Z"
+  },
+  "kpis": {
+    "completenessScore": 88.5,
+    "mandatoryRequirementsTotal": 14,
+    "mandatoryRequirementsCovered": 12,
+    "openGapsCount": 2,
+    "compliancePercentage": 85.7,
+    "estimatedValue": "$2.4M",
+    "winProbability": "72%"
+  },
+  "progress": {
+    "currentStage": "Awaiting SME",
+    "stageHistory": [
+      {
+        "stage": "New",
+        "status": "Completed",
+        "updatedBy": "system",
+        "notes": "RFP ingested from SharePoint",
+        "timestamp": "2026-11-06T09:30:00Z"
+      },
+      {
+        "stage": "In analysis",
+        "status": "Completed",
+        "updatedBy": "intake_agent",
+        "notes": "Requirements matrix generated (14 mandatory, 3 optional)",
+        "timestamp": "2026-11-06T10:15:00Z"
+      },
+      {
+        "stage": "Drafting",
+        "status": "Completed",
+        "updatedBy": "drafting_agent",
+        "notes": "First draft compiled across 4 core sections",
+        "timestamp": "2026-11-07T11:45:00Z"
+      },
+      {
+        "stage": "Awaiting SME",
+        "status": "Started",
+        "updatedBy": "compliance_agent",
+        "notes": "2 mandatory gaps routed to SME-Infrastructure and SME-Pricing",
+        "timestamp": "2026-11-07T14:30:00Z"
+      }
+    ]
+  },
+  "analysisCards": [
+    {
+      "cardId": "CARD-SEC",
+      "title": "Security & Identity Architecture",
+      "domain": "Security",
+      "status": "Verified",
+      "summaryText": "Zero-trust architecture fully compliant with Azure AD SSO and AES-256 Key Vault encryption.",
+      "itemsCount": 5,
+      "actionNeeded": "None - fully grounded in past wins"
+    },
+    {
+      "cardId": "CARD-DR",
+      "title": "High Availability & Disaster Recovery",
+      "domain": "Delivery",
+      "status": "Gaps Identified",
+      "summaryText": "Client requires 99.9% uptime SLA with Disaster Recovery RTO under 4 hours.",
+      "itemsCount": 3,
+      "actionNeeded": "Route to @SME-Infrastructure (Ajit Kumar) to confirm secondary region RTO architecture"
+    },
+    {
+      "cardId": "CARD-COM",
+      "title": "Commercial & Rate Cards",
+      "domain": "Commercial",
+      "status": "Needs Review",
+      "summaryText": "L1-L3 cloud support rate card requested for 3-year support term.",
+      "itemsCount": 2,
+      "actionNeeded": "Awaiting rate card table from finance lead"
+    }
+  ],
+  "alerts": [
+    {
+      "alertId": "ALT-001",
+      "severity": "Critical",
+      "message": "Mandatory DR SLA gap (RTO < 4h) requires SME sign-off before Friday",
+      "targetRole": "@SME-Infrastructure",
+      "assignedTo": "ajit.kumar@ascendion.com"
+    },
+    {
+      "alertId": "ALT-002",
+      "severity": "Warning",
+      "message": "Submission deadline in 10 days (18 Nov 2026)",
+      "targetRole": "Bid Owner",
+      "assignedTo": "rukul.singh@ascendion.com"
+    }
+  ],
+  "quickLinks": [
+    {
+      "label": "Original RFP",
+      "fileName": "SAMPLE_RFP_01_Harborline_Claims_Modernisation.docx",
+      "url": "https://storage.blob.core.windows.net/rfp-docs/SAMPLE_RFP_01_Harborline_Claims_Modernisation.docx",
+      "fileType": "DOCX"
+    },
+    {
+      "label": "Working Draft",
+      "fileName": "Harborline_Proposal_Draft_v1.0.docx",
+      "url": "https://storage.blob.core.windows.net/draft-docs/Harborline_Proposal_Draft_v1.0.docx",
+      "fileType": "DOCX"
+    }
+  ]
+}

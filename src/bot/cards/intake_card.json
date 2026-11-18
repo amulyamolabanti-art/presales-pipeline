@@ -1,0 +1,146 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "📋",
+                  "size": "ExtraLarge"
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "New RFP Intake: Claims Platform Modernisation",
+                  "weight": "Bolder",
+                  "size": "Large",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "Source: samples/rfp/SAMPLE_RFP_01_Harborline_Claims_Modernisation.docx",
+                  "size": "Small",
+                  "isSubtle": true,
+                  "spacing": "None",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "spacing": "Medium",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Opportunity Overview",
+          "weight": "Bolder",
+          "size": "Medium",
+          "wrap": true
+        },
+        {
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Client:",
+              "value": "Harborline Mutual Insurance Company"
+            },
+            {
+              "title": "RFP Reference:",
+              "value": "HMI-IT-2026-114"
+            },
+            {
+              "title": "RFP Due Date:",
+              "value": "December 4, 2026 (17:00 US Eastern)"
+            },
+            {
+              "title": "Target Circle:",
+              "value": "Financial Services & Insurance Circle"
+            },
+            {
+              "title": "Scope:",
+              "value": "ClaimsOne v7 Modernisation & AI-Assisted Claims Triage"
+            },
+            {
+              "title": "Status:",
+              "value": "Pending Pre-Sales Confirmation (business_flow_v2, Step 2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "style": "default",
+      "spacing": "Medium",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "👥 Suggested Bid Team (AI Match)",
+          "weight": "Bolder",
+          "size": "Medium",
+          "wrap": true
+        },
+        {
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Lead Solution Architect:",
+              "value": "Sarah Jenkins (Cloud Migration & Claims Modernisation CoE)"
+            },
+            {
+              "title": "Bid Manager:",
+              "value": "Michael Chang (Presales Operations)"
+            },
+            {
+              "title": "Domain SME:",
+              "value": "David Kumar (P&C Insurance & Claims Triage)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Assign bid owner",
+      "data": {
+        "action": "assign_bid_owner",
+        "rfpId": "HMI-IT-2026-114",
+        "client": "Harborline Mutual Insurance Company",
+        "circle": "Financial Services & Insurance Circle"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Confirm team",
+      "style": "positive",
+      "data": {
+        "action": "confirm_team",
+        "rfpId": "HMI-IT-2026-114",
+        "client": "Harborline Mutual Insurance Company",
+        "circle": "Financial Services & Insurance Circle"
+      }
+    }
+  ]
+}

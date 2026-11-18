@@ -1,0 +1,95 @@
+{
+  "requirements": [
+    {
+      "id": 1,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "The proposed platform must support single sign-on (SSO) via Azure Active Directory (AAD).",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 2,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "All data must be encrypted at rest using AES-256 and in transit using TLS 1.3 or higher.",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 3,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "The system shall provide role-based access control (RBAC) with at least five configurable roles.",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 4,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "Audit logs must be retained for a minimum of 12 months and must be exportable in CSV format.",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 5,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "The solution should support multi-language UI (English mandatory; additional languages desirable).",
+      "classification": "optional",
+      "domain": "Technical"
+    },
+    {
+      "id": 6,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "Response SLA for critical incidents shall not exceed 1 hour.",
+      "classification": "mandatory",
+      "domain": "Delivery"
+    },
+    {
+      "id": 7,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "The vendor must provide a disaster recovery plan with an RTO of less than 4 hours.",
+      "classification": "mandatory",
+      "domain": "Delivery"
+    },
+    {
+      "id": 8,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "API documentation is preferred but not mandatory for V1 delivery.",
+      "classification": "optional",
+      "domain": "Technical"
+    },
+    {
+      "id": 9,
+      "section": "Section: 2.1 Technical Requirements",
+      "requirement_text": "Integration with Microsoft Teams for notifications would be advantageous.",
+      "classification": "optional",
+      "domain": "Technical"
+    },
+    {
+      "id": 10,
+      "section": "Section: 3.0 Commercial Terms",
+      "requirement_text": "Pricing must be presented on a per-user, per-month basis.",
+      "classification": "mandatory",
+      "domain": "Commercial"
+    },
+    {
+      "id": 11,
+      "section": "Section: 3.0 Commercial Terms",
+      "requirement_text": "A fixed-price option is preferred for the implementation phase.",
+      "classification": "optional",
+      "domain": "Commercial"
+    },
+    {
+      "id": 12,
+      "section": "Section: 3.0 Commercial Terms",
+      "requirement_text": "The vendor must have cyber-liability insurance of at least $5M USD.",
+      "classification": "mandatory",
+      "domain": "Legal"
+    }
+  ],
+  "summary": {
+    "total_requirements": 12,
+    "mandatory_count": 8,
+    "optional_count": 4,
+    "unclear_count": 0,
+    "completeness_score": 100
+  }
+}

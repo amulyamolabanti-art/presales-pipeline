@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": {
+      "value": "prod"
+    },
+    "location": {
+      "value": "eastus2"
+    },
+    "workloadName": {
+      "value": "proposal-ai"
+    },
+    "instanceSuffix": {
+      "value": "001"
+    },
+    "deployAiPlatformServices": {
+      "value": true
+    },
+    "deploySql": {
+      "value": true
+    },
+    "corporateIpRanges": {
+      "value": [
+        "104.42.195.92/32",
+        "40.76.54.131/32"
+      ]
+    },
+    "sqlEntraAdminLogin": {
+      "value": "sg-proposal-ai-prod"
+    },
+    "sqlEntraAdminObjectId": {
+      "value": ""
+    },
+    "sqlEntraAdminPrincipalType": {
+      "value": "Group"
+    },
+    "sqlCorporateFirewallRules": {
+      "value": [
+        {
+          "name": "CorporateVpnGateway-1",
+          "startIpAddress": "104.42.195.92",
+          "endIpAddress": "104.42.195.92"
+        },
+        {
+          "name": "CorporateVpnGateway-2",
+          "startIpAddress": "40.76.54.131",
+          "endIpAddress": "40.76.54.131"
+        }
+      ]
+    },
+    "customTags": {
+      "value": {
+        "Owner": "Presales Operations",
+        "CostCenter": "Presales-Production"
+      }
+    }
+  }
+}

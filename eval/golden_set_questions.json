@@ -1,0 +1,152 @@
+[
+  {
+    "id": "GT-001",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "Security & Compliance",
+    "question": "What security compliance certification is mandatory for the vendor proposing the claims modernization platform?",
+    "expected_answer": "The vendor must hold a current SOC 2 Type II report covering the services proposed (Requirement NFR-03).",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114), Section 5.2 (Non-functional requirements), NFR-03",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Harborline sample RFP"
+  },
+  {
+    "id": "GT-002",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "Cloud Architecture",
+    "question": "Which cloud provider and regional hosting restrictions are specified for Harborline's new claims platform?",
+    "expected_answer": "The platform must be hosted on Microsoft Azure in United States regions only. No claims data may be stored or processed outside the United States (Requirement NFR-01).",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114), Section 5.2 (Non-functional requirements), NFR-01",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Harborline sample RFP"
+  },
+  {
+    "id": "GT-003",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "Security & Compliance",
+    "question": "What encryption standards and key management controls are required for Harborline claims data?",
+    "expected_answer": "Data must be encrypted in transit using TLS 1.2 or higher, and encrypted at rest with customer-managed keys (Requirement NFR-06).",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114), Section 5.2 (Non-functional requirements), NFR-06",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Harborline sample RFP"
+  },
+  {
+    "id": "GT-004",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "SLA & Support",
+    "question": "What is the mandatory system availability and disaster recovery RPO/RTO for Harborline's claims solution?",
+    "expected_answer": "FNOL availability must be 99.9% per calendar month (NFR-02). Disaster recovery requires a recovery point objective (RPO) of 15 minutes and a recovery time objective (RTO) of 4 hours (NFR-08).",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114), Section 5.2, Requirements NFR-02 and NFR-08",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Harborline sample RFP"
+  },
+  {
+    "id": "GT-005",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "Pricing & Commercial",
+    "question": "How must the pricing and payments be structured across the phases of the Harborline engagement?",
+    "expected_answer": "Phase 1 (Discovery) must be priced as a fixed fee. Phases 2 and 3 must be priced on a time-and-materials basis with a not-to-exceed amount. 10% of each Phase 2 and 3 invoice will be held back until final acceptance, with payment terms of net 45 days.",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114), Section 7 (Commercial requirements)",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Harborline sample RFP"
+  },
+  {
+    "id": "GT-006",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "Timeline & Milestones",
+    "question": "Within what timeframe must the legacy ClaimsOne application be fully decommissioned following contract signature?",
+    "expected_answer": "ClaimsOne must be decommissioned within 24 months of contract signature.",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114), Section 3 (Objectives)",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Harborline sample RFP"
+  },
+  {
+    "id": "GT-007",
+    "rfp_id": "SAMPLE-RFI-02-CEDARBROOK",
+    "category": "Security & Compliance",
+    "question": "What healthcare regulatory constraints and preferred security certifications apply to Cedarbrook Health System?",
+    "expected_answer": "All Protected Health Information (PHI) is subject to HIPAA and requires a signed Business Associate Agreement (BAA) before access. PHI must not be accessed from outside the United States without prior written approval. Preference is given to respondents holding HITRUST CSF certification.",
+    "expected_source": "Cedarbrook Health RFI (CHS-RFI-2026-07), Section 5 (Constraints), Page 2",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Cedarbrook sample RFI"
+  },
+  {
+    "id": "GT-008",
+    "rfp_id": "SAMPLE-RFI-02-CEDARBROOK",
+    "category": "Cloud Architecture",
+    "question": "What is the volume and architecture of Cedarbrook's current on-premises data warehouse environment?",
+    "expected_answer": "Cedarbrook has an on-premises SQL Server 2016 enterprise data warehouse of approximately 38 TB, loaded nightly by around 900 SSIS packages, with about 2,100 SSRS and self-service BI reports.",
+    "expected_source": "Cedarbrook Health RFI (CHS-RFI-2026-07), Section 3 (Current state), Page 2",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Cedarbrook sample RFI"
+  },
+  {
+    "id": "GT-009",
+    "rfp_id": "SAMPLE-RFI-02-CEDARBROOK",
+    "category": "Timeline & Milestones",
+    "question": "What is the response submission deadline for the Cedarbrook Health System RFI?",
+    "expected_answer": "Responses are due by 20 November 2026, 12:00 US Central.",
+    "expected_source": "Cedarbrook Health RFI (CHS-RFI-2026-07), Cover Table, Page 1",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Cedarbrook sample RFI"
+  },
+  {
+    "id": "GT-010",
+    "rfp_id": "SAMPLE-RFP-03-VELORA",
+    "category": "Cloud Architecture",
+    "question": "What is the search latency SLA and hosting environment for Velora Retail Group's e-commerce platform?",
+    "expected_answer": "Search results must be returned in under 200 ms at the 95th percentile (Requirement L1-05). The platform is hosted on Microsoft Azure in the UK South region.",
+    "expected_source": "Velora Retail Tender (VRG-ITT-2026-031), Section 2 & Section 3.1 (L1-05), Page 2",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Velora sample tender"
+  },
+  {
+    "id": "GT-011",
+    "rfp_id": "SAMPLE-RFP-03-VELORA",
+    "category": "SLA & Support",
+    "question": "What are the response and resolution SLAs for Priority 1 (P1) incidents under Velora's managed service?",
+    "expected_answer": "Priority 1 (P1) incidents require a 15-minute response time and resolution within 4 hours. Service credits of up to 15% of monthly fees apply when service levels are missed.",
+    "expected_source": "Velora Retail Tender (VRG-ITT-2026-031), Section 4.2 (Service levels), Page 3",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Velora sample tender"
+  },
+  {
+    "id": "GT-012",
+    "rfp_id": "SAMPLE-RFP-03-VELORA",
+    "category": "Timeline & Milestones",
+    "question": "When must the new AI search engine be live, and what change freeze period does Velora enforce?",
+    "expected_answer": "The new search engine must be live before Black Friday 2027. Velora operates a peak trading change freeze from 9 November to 4 January each year with no production releases permitted.",
+    "expected_source": "Velora Retail Tender (VRG-ITT-2026-031), Section 3.2 (Timing), Page 2",
+    "is_not_found": false,
+    "reviewer_notes": "Calibrated against Pooja's Velora sample tender"
+  },
+  {
+    "id": "GT-013",
+    "rfp_id": "SAMPLE-RFP-01-HARBORLINE",
+    "category": "Negative / Refusal Test",
+    "question": "What is the physical street address of Harborline Mutual's primary data centre facility?",
+    "expected_answer": "This information is not specified in the provided RFP document.",
+    "expected_source": "Harborline RFP (HMI-IT-2026-114) — [Refusal Trap: Data centre physical street address is not stated in RFP]",
+    "is_not_found": true,
+    "reviewer_notes": "Hallucination trap: model must refuse"
+  },
+  {
+    "id": "GT-014",
+    "rfp_id": "SAMPLE-RFI-02-CEDARBROOK",
+    "category": "Negative / Refusal Test",
+    "question": "Which public cloud provider (AWS or Google Cloud) has Cedarbrook Health System officially selected for its lakehouse?",
+    "expected_answer": "This information is not specified in the provided RFP document (Cedarbrook explicitly states in Section 4 that it has not selected a cloud provider and welcomes vendor views).",
+    "expected_source": "Cedarbrook Health RFI (CHS-RFI-2026-07), Section 4 (Desired future state), Page 2",
+    "is_not_found": true,
+    "reviewer_notes": "Hallucination trap: model must refuse"
+  },
+  {
+    "id": "GT-015",
+    "rfp_id": "SAMPLE-RFP-03-VELORA",
+    "category": "Negative / Refusal Test",
+    "question": "What is the penalty fee percentage if a vendor fails to resolve a Priority 4 (P4) cosmetic issue within 1 business day?",
+    "expected_answer": "This information is not specified in the provided RFP document (service credits are not assigned to P4 cosmetic issues; resolution is agreed release).",
+    "expected_source": "Velora Retail Tender (VRG-ITT-2026-031), Section 4.2 — [Refusal Trap: Penalties for P4 issues are unstated]",
+    "is_not_found": true,
+    "reviewer_notes": "Hallucination trap: model must refuse"
+  }
+]

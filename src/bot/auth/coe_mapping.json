@@ -1,0 +1,194 @@
+{
+  "_comment": "Git-safe fallback matching local SharePoint COE_Directory schema. Local app auto-reads gitignored local_sharepoint_data/COE_Directory/ when present.",
+  "sharepoint_list": {
+    "list_name": "COE_Directory",
+    "columns": {
+      "circle_name": {
+        "internal_name": "Title",
+        "alias": "CircleName",
+        "display_name": "Circle Name",
+        "type": "Single line of text"
+      },
+      "circle_id": {
+        "internal_name": "CircleID",
+        "display_name": "Circle ID",
+        "type": "Single line of text"
+      },
+      "coe_name": {
+        "internal_name": "COEName",
+        "display_name": "COE Name",
+        "type": "Single line of text"
+      },
+      "coe_email_id": {
+        "internal_name": "COEEmailID",
+        "display_name": "COE Email ID",
+        "type": "Single line of text"
+      }
+    }
+  },
+  "circles": [
+    {
+      "circle_id": "CIR-TST-01",
+      "circle_name": "Testing",
+      "aliases": ["testing", "qa", "quality engineering"]
+    },
+    {
+      "circle_id": "CIR-PLT-02",
+      "circle_name": "Platform",
+      "aliases": ["platform", "cloud", "cloud & platform"]
+    },
+    {
+      "circle_id": "CIR-DNI-03",
+      "circle_name": "Data & Insights",
+      "aliases": ["data & insights", "d&i", "d & i", "data insights", "data & ai"]
+    },
+    {
+      "circle_id": "CIR-SFDC-04",
+      "circle_name": "Salesforce",
+      "aliases": ["salesforce", "sfdc", "crm"]
+    }
+  ],
+  "strict_mapping_rules": [
+    {
+      "coe_name": "AWS COE",
+      "fallback_circle": "Platform",
+      "rule_description": "If RFP contains AWS services (S3, Redshift, Glue, EMR, Lambda, etc.)",
+      "match_keywords": [
+        "aws",
+        "amazon web services",
+        "s3",
+        "redshift",
+        "aws glue",
+        "glue",
+        "emr",
+        "lambda",
+        "ec2",
+        "athena",
+        "kinesis",
+        "dynamodb",
+        "eks",
+        "rds"
+      ]
+    },
+    {
+      "coe_name": "GCP COE",
+      "fallback_circle": "Platform",
+      "rule_description": "If RFP contains GCP services (BigQuery, Dataflow, Pub/Sub, GCS, etc.)",
+      "match_keywords": [
+        "gcp",
+        "google cloud",
+        "bigquery",
+        "dataflow",
+        "pub/sub",
+        "pubsub",
+        "gcs",
+        "cloud storage",
+        "dataproc",
+        "cloud run",
+        "gke",
+        "vertex ai"
+      ]
+    },
+    {
+      "coe_name": "Azure COE",
+      "fallback_circle": "Platform",
+      "rule_description": "If RFP contains Azure or Microsoft Fabric (ADF, Synapse, Fabric, ADLS, etc.)",
+      "match_keywords": [
+        "azure",
+        "microsoft fabric",
+        "fabric",
+        "adf",
+        "azure data factory",
+        "synapse",
+        "azure synapse",
+        "adls",
+        "azure data lake",
+        "azure sql",
+        "aks",
+        "azure functions"
+      ]
+    },
+    {
+      "coe_name": "Snowflake COE",
+      "fallback_circle": "Data & Insights",
+      "rule_description": "If Snowflake is mentioned",
+      "match_keywords": [
+        "snowflake",
+        "snowpark",
+        "snowpipe"
+      ]
+    },
+    {
+      "coe_name": "Databricks COE",
+      "fallback_circle": "Data & Insights",
+      "rule_description": "If Databricks is mentioned",
+      "match_keywords": [
+        "databricks",
+        "delta lake",
+        "unity catalog",
+        "photon",
+        "mlflow"
+      ]
+    },
+    {
+      "coe_name": "Data Modelling COE",
+      "fallback_circle": "Data & Insights",
+      "rule_description": "If RFP includes modelling paradigms (star schema, dimensional modelling, data vault, normalization)",
+      "match_keywords": [
+        "star schema",
+        "dimensional modelling",
+        "dimensional modeling",
+        "data vault",
+        "normalization",
+        "normalisation",
+        "snowflake schema",
+        "data modelling",
+        "data modeling",
+        "3nf",
+        "er diagram"
+      ]
+    },
+    {
+      "coe_name": "Reporting COE",
+      "fallback_circle": "Data & Insights",
+      "rule_description": "If RFP includes BI Reporting.",
+      "match_keywords": [
+        "bi reporting",
+        "business intelligence",
+        "power bi",
+        "tableau",
+        "looker",
+        "qlik",
+        "ssrs",
+        "bi dashboard",
+        "executive reporting"
+      ]
+    }
+  ],
+  "coe_mappings": [
+    {
+      "Title": "Testing",
+      "CircleID": "CIR-TST-01",
+      "COEName": "Quality Engineering & Testing COE",
+      "COEEmailID": "qe-coe@presales.example"
+    },
+    {
+      "Title": "Platform",
+      "CircleID": "CIR-PLT-02",
+      "COEName": "Cloud & Platform Engineering COE",
+      "COEEmailID": "platform-coe@presales.example"
+    },
+    {
+      "Title": "Data & Insights",
+      "CircleID": "CIR-DNI-03",
+      "COEName": "Data & Insights / AI COE",
+      "COEEmailID": "data-insights-coe@presales.example"
+    },
+    {
+      "Title": "Salesforce",
+      "CircleID": "CIR-SFDC-04",
+      "COEName": "Salesforce & Enterprise Apps COE",
+      "COEEmailID": "salesforce-coe@presales.example"
+    }
+  ]
+}

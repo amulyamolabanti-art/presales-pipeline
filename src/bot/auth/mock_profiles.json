@@ -1,0 +1,43 @@
+{
+  "profiles": {
+    "presales-fsi-01": {
+      "user_id": "presales-fsi-01",
+      "display_name": "Alex Morgan",
+      "email": "alex.morgan@presales.example",
+      "department": "Financial Services & Insurance",
+      "job_title": "Lead Solution Architect"
+    },
+    "presales-health-01": {
+      "user_id": "presales-health-01",
+      "display_name": "Elena Rostova",
+      "email": "elena.rostova@presales.example",
+      "department": "Healthcare & Clinical Analytics",
+      "job_title": "Healthcare Solutions Architect"
+    },
+    "presales-retail-01": {
+      "user_id": "presales-retail-01",
+      "display_name": "Priya Sharma",
+      "email": "priya.sharma@presales.example",
+      "department": "Retail & E-Commerce",
+      "job_title": "Retail Domain SME"
+    },
+    "presales-ent-01": {
+      "user_id": "presales-ent-01",
+      "display_name": "Jordan Lee",
+      "email": "jordan.lee@presales.example",
+      "department": "Cloud & Enterprise Architecture",
+      "job_title": "Enterprise Bid Manager"
+    }
+  },
+  "persona_aliases": {
+    "financial": "presales-fsi-01",
+    "fsi": "presales-fsi-01",
+    "insurance": "presales-fsi-01",
+    "banking": "presales-fsi-01",
+    "healthcare": "presales-health-01",
+    "health": "presales-health-01",
+    "retail": "presales-retail-01",
+    "ecommerce": "presales-retail-01",
+    "enterprise": "presales-ent-01"
+  }
+}

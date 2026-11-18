@@ -1,0 +1,42 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.17",
+    "version": "1.0.0",
+    "id": "8e14c875-2724-45e2-b76e-c8e5c6d08ef5",
+    "developer": {
+        "name": "Ascendion - Data & Insights",
+        "websiteUrl": "https://ascendionhub.sharepoint.com/sites/DataNInsights2.0",
+        "privacyUrl": "https://ascendionhub.sharepoint.com/sites/DataNInsights2.0",
+        "termsOfUseUrl": "https://ascendionhub.sharepoint.com/sites/DataNInsights2.0"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "AI Proposal Assistant",
+        "full": "AI Proposal Assistant (Sprint 0 prototype)"
+    },
+    "description": {
+        "short": "Proposal workspace with dashboard and assistant",
+        "full": "Sprint 0 prototype of the AI Proposal Assistant: proposal workspace, Overview dashboard and docked assistant on mock data. Internal use by the Data & Insights project team."
+    },
+    "accentColor": "#1F5B7A",
+    "staticTabs": [
+        {
+            "entityId": "workspace",
+            "name": "Workspace",
+            "contentUrl": "${{BOT_ENDPOINT}}/tab",
+            "websiteUrl": "${{BOT_ENDPOINT}}/tab",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity"
+    ],
+    "validDomains": [
+        "${{BOT_DOMAIN}}"
+    ]
+}

@@ -1,0 +1,52 @@
+{
+  "_comment": "Git-safe fallback matching local SharePoint User_Directory schema. Local app auto-reads gitignored local_sharepoint_data/User_Directory/ when present.",
+  "sharepoint_list": {
+    "list_name": "User_Directory",
+    "columns": {
+      "user_name": {
+        "internal_name": "Title",
+        "alias": "UserName",
+        "display_name": "User Name",
+        "type": "Single line of text"
+      },
+      "user_email": {
+        "internal_name": "UserEmail",
+        "display_name": "User Email",
+        "type": "Single line of text"
+      },
+      "circle_name": {
+        "internal_name": "CircleName",
+        "display_name": "Circle Name",
+        "type": "Single line of text"
+      }
+    }
+  },
+  "allowed_circles": [
+    "Testing",
+    "Platform",
+    "Data & Insights",
+    "Salesforce"
+  ],
+  "user_mappings": [
+    {
+      "Title": "Yasaswini K",
+      "UserEmail": "yasaswini.k@presales.example",
+      "CircleName": "Platform"
+    },
+    {
+      "Title": "Surendra Reddy",
+      "UserEmail": "surendra.reddy@presales.example",
+      "CircleName": "Data & Insights"
+    },
+    {
+      "Title": "Charishma M",
+      "UserEmail": "charishma.m@presales.example",
+      "CircleName": "Testing"
+    },
+    {
+      "Title": "Amulya N",
+      "UserEmail": "amulya.n@presales.example",
+      "CircleName": "Salesforce"
+    }
+  ]
+}

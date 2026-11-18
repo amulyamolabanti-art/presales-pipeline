@@ -1,0 +1,347 @@
+{
+  "circles": {
+    "financial_services": "Financial Services",
+    "healthcare": "Healthcare",
+    "retail": "Retail",
+    "enterprise": "Enterprise"
+  },
+  "circle_to_tab_code": {
+    "Financial Services": "BFSI",
+    "Healthcare": "HLS",
+    "Retail": "RETAIL_CPG",
+    "Enterprise": "DIGITAL_AI",
+    "Testing": "CIR-TST-01",
+    "Platform": "CIR-PLT-02",
+    "Data & Insights": "CIR-DNI-03",
+    "Salesforce": "CIR-SFDC-04"
+  },
+  "department_to_circle": {
+    "financial services": "Financial Services",
+    "financial services & insurance": "Financial Services",
+    "banking & financial services": "Financial Services",
+    "banking": "Financial Services",
+    "bfsi": "Financial Services",
+    "insurance": "Financial Services",
+    "p&c insurance": "Financial Services",
+    "healthcare": "Healthcare",
+    "healthcare & life sciences": "Healthcare",
+    "healthcare & clinical analytics": "Healthcare",
+    "life sciences": "Healthcare",
+    "clinical analytics": "Healthcare",
+    "retail": "Retail",
+    "retail & consumer goods": "Retail",
+    "retail & e-commerce": "Retail",
+    "consumer goods": "Retail",
+    "e-commerce": "Retail",
+    "enterprise": "Enterprise",
+    "cloud & enterprise architecture": "Enterprise",
+    "enterprise solutions": "Enterprise",
+    "general enterprise": "Enterprise"
+  },
+  "keyword_rules": [
+    {
+      "circle": "Financial Services",
+      "keywords": ["financ", "bank", "insur", "bfsi", "claims", "fintech"]
+    },
+    {
+      "circle": "Healthcare",
+      "keywords": ["health", "clinic", "medic", "pharma", "life science", "fhir"]
+    },
+    {
+      "circle": "Retail",
+      "keywords": ["retail", "commerce", "consumer", "merchandising"]
+    },
+    {
+      "circle": "Enterprise",
+      "keywords": ["enterprise", "cloud", "platform", "data", "infra"]
+    }
+  ],
+  "sample_bids": [
+    {
+      "opportunityId": "OPP-2026-001",
+      "clientName": "Harborline Mutual Insurance",
+      "bidTitle": "Claims Platform Modernisation & AI Triage",
+      "circle": "Financial Services",
+      "dueDate": "2026-12-04",
+      "source": "samples/rfp/SAMPLE_RFP_01_Harborline_Claims_Modernisation.docx"
+    },
+    {
+      "opportunityId": "OPP-2026-002",
+      "clientName": "Cedarbrook Health System",
+      "bidTitle": "Enterprise Data Platform & Clinical Analytics",
+      "circle": "Healthcare",
+      "dueDate": "2026-12-11",
+      "source": "samples/rfp/SAMPLE_RFI_02_Cedarbrook_Data_Platform.pdf"
+    },
+    {
+      "opportunityId": "OPP-2026-003",
+      "clientName": "Velora Retail Group plc",
+      "bidTitle": "E-commerce Search, Personalisation & Managed Services",
+      "circle": "Retail",
+      "dueDate": "2026-12-15",
+      "source": "samples/rfp/SAMPLE_RFP_03_Velora_Search_Managed_Services.pdf"
+    },
+    {
+      "opportunityId": "OPP-2026-004",
+      "clientName": "Fabrikam Financial (Enterprise Seed)",
+      "bidTitle": "Generative AI Analytics Platform",
+      "circle": "Enterprise",
+      "dueDate": "2026-12-20",
+      "source": "db/002_seed_data.sql"
+    }
+  ],
+  "directory_sample_bids": [
+    {
+      "opportunityId": "OPP-2026-PLT-01",
+      "clientName": "Harborline Mutual Insurance",
+      "bidTitle": "Azure Landing Zone, Microservices Platform & AI Automation",
+      "circle": "Platform",
+      "dueDate": "2026-12-04",
+      "source": "samples/rfp/SAMPLE_RFP_01_Harborline_Claims_Modernisation.docx"
+    },
+    {
+      "opportunityId": "OPP-2026-DNI-01",
+      "clientName": "Cedarbrook Health System",
+      "bidTitle": "Unified Snowflake Lakehouse & Clinical GenAI Analytics",
+      "circle": "Data & Insights",
+      "dueDate": "2026-12-11",
+      "source": "samples/rfp/SAMPLE_RFI_02_Cedarbrook_Data_Platform.pdf"
+    },
+    {
+      "opportunityId": "OPP-2026-TST-01",
+      "clientName": "Velora Retail Group plc",
+      "bidTitle": "Autonomous Quality Engineering & Performance Automation Suite",
+      "circle": "Testing",
+      "dueDate": "2026-12-15",
+      "source": "samples/rfp/SAMPLE_RFP_03_Velora_Search_Managed_Services.pdf"
+    },
+    {
+      "opportunityId": "OPP-2026-SFDC-01",
+      "clientName": "Northstar Commercial Lending",
+      "bidTitle": "Salesforce Financial Services Cloud & Agentforce CRM Rollout",
+      "circle": "Salesforce",
+      "dueDate": "2026-12-18",
+      "source": "samples/rfp/SAMPLE_RFP_01_Harborline_Claims_Modernisation.docx"
+    }
+  ],
+  "bid_to_rfp_key": {
+    "OPP-2026-001": "harborline",
+    "OPP-2026-002": "cedarbrook",
+    "OPP-2026-003": "velora"
+  },
+  "bid_ui_metadata": {
+    "OPP-2026-001": {
+      "rfpId": "HMI-IT-2026-114",
+      "tabCircleCode": "BFSI",
+      "circleLabel": "Financial Services & Insurance Circle",
+      "circleBadgeClass": "badge-draft",
+      "displayDueDate": "4 Dec 2026",
+      "dueDateFormatted": "December 4, 2026 (17:00 US Eastern)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-triage",
+      "detailKey": "Harborline",
+      "icon": "🛡",
+      "compliance": ["SOC 2 Type II", "PCI-DSS Level 1", "State Solvency"],
+      "channelName": "#circle-bfsi-rfp"
+    },
+    "OPP-2026-002": {
+      "rfpId": "CHS-RFI-2026-042",
+      "tabCircleCode": "HLS",
+      "circleLabel": "Healthcare & Life Sciences Circle",
+      "circleBadgeClass": "badge-approval",
+      "displayDueDate": "11 Dec 2026",
+      "dueDateFormatted": "December 11, 2026 (17:00 US Eastern)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-sme",
+      "detailKey": "Cedarbrook",
+      "icon": "🏥",
+      "compliance": ["HIPAA / HITECH", "HITRUST CSF", "FHIR R4"],
+      "channelName": "#circle-healthcare-rfp"
+    },
+    "OPP-2026-003": {
+      "rfpId": "VRG-ITT-2026-088",
+      "tabCircleCode": "RETAIL_CPG",
+      "circleLabel": "Retail & Consumer Goods Circle",
+      "circleBadgeClass": "badge-sme",
+      "displayDueDate": "15 Dec 2026",
+      "dueDateFormatted": "December 15, 2026 (17:00 GMT)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-draft",
+      "detailKey": "Velora",
+      "icon": "🛍",
+      "compliance": ["PCI-DSS Level 1", "GDPR / UK-GDPR", "Sub-20ms SLA"],
+      "channelName": "#circle-retail-rfp"
+    },
+    "OPP-2026-004": {
+      "rfpId": "FAB-ENT-2026-004",
+      "tabCircleCode": "DIGITAL_AI",
+      "circleLabel": "Enterprise Cloud & AI Circle",
+      "circleBadgeClass": "badge-submitted",
+      "displayDueDate": "20 Dec 2026",
+      "dueDateFormatted": "December 20, 2026 (17:00 US Eastern)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-approval",
+      "detailKey": "CoE",
+      "icon": "☁️",
+      "compliance": ["ISO 27001", "FedRAMP Moderate", "Zero-Trust IAM"],
+      "channelName": "#circle-enterprise-rfp",
+      "suggestedTeam": {
+        "Lead Solution Architect:": "Jordan Lee (Enterprise Cloud CoE)",
+        "Bid Manager:": "Karthik Valluri (Presales Operations)",
+        "Domain SME:": "Asha Rao (Enterprise AI Governance)"
+      }
+    },
+    "OPP-2026-PLT-01": {
+      "rfpId": "PLT-IT-2026-201",
+      "tabCircleCode": "CIR-PLT-02",
+      "circleLabel": "Platform Circle (CIR-PLT-02)",
+      "circleBadgeClass": "badge-submitted",
+      "displayDueDate": "4 Dec 2026",
+      "dueDateFormatted": "December 4, 2026 (17:00 US Eastern)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-triage",
+      "detailKey": "Harborline",
+      "icon": "☁️",
+      "compliance": ["SOC 2 Type II", "ISO 27001", "Zero-Trust AKS"],
+      "channelName": "#circle-platform-rfp",
+      "suggestedTeam": {
+        "Lead Solution Architect:": "Yasaswini K (Platform COE)",
+        "Bid Manager:": "Karthik Valluri (Presales Operations)",
+        "Domain SME:": "Asha Rao (Cloud & SRE)"
+      }
+    },
+    "OPP-2026-DNI-01": {
+      "rfpId": "DNI-RFI-2026-302",
+      "tabCircleCode": "CIR-DNI-03",
+      "circleLabel": "Data & Insights Circle (CIR-DNI-03)",
+      "circleBadgeClass": "badge-approval",
+      "displayDueDate": "11 Dec 2026",
+      "dueDateFormatted": "December 11, 2026 (17:00 US Eastern)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-sme",
+      "detailKey": "Cedarbrook",
+      "icon": "📊",
+      "compliance": ["HIPAA / HITECH", "FHIR R4", "Purview Governance"],
+      "channelName": "#circle-data-insights-rfp",
+      "suggestedTeam": {
+        "Data Architecture Lead:": "Surendra Reddy (Data & Insights COE)",
+        "Snowflake SME:": "Elena Rostova (Data Engineering)",
+        "Governance Lead:": "Michael Chang (Presales Operations)"
+      }
+    },
+    "OPP-2026-TST-01": {
+      "rfpId": "TST-ITT-2026-105",
+      "tabCircleCode": "CIR-TST-01",
+      "circleLabel": "Testing Circle (CIR-TST-01)",
+      "circleBadgeClass": "badge-sme",
+      "displayDueDate": "15 Dec 2026",
+      "dueDateFormatted": "December 15, 2026 (17:00 GMT)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-draft",
+      "detailKey": "Velora",
+      "icon": "🧪",
+      "compliance": ["PCI-DSS Level 1", "ISTQB Automated", "Sub-20ms Perf SLA"],
+      "channelName": "#circle-testing-rfp",
+      "suggestedTeam": {
+        "QE Lead:": "Charishma M (Testing COE)",
+        "Automation Architect:": "Priya Sharma (Performance QE)",
+        "Test Ops Lead:": "Michael Chang (Presales Operations)"
+      }
+    },
+    "OPP-2026-SFDC-01": {
+      "rfpId": "SFDC-CRM-2026-408",
+      "tabCircleCode": "CIR-SFDC-04",
+      "circleLabel": "Salesforce Circle (CIR-SFDC-04)",
+      "circleBadgeClass": "badge-draft",
+      "displayDueDate": "18 Dec 2026",
+      "dueDateFormatted": "December 18, 2026 (17:00 US Eastern)",
+      "stage": "Stage 2: Triage (Pending Pre-Sales Confirmation)",
+      "stageBadgeClass": "badge-triage",
+      "detailKey": "Harborline",
+      "icon": "⚡",
+      "compliance": ["Salesforce Shield", "SOC 2 Type II", "OAuth 2.0 SSO"],
+      "channelName": "#circle-salesforce-rfp",
+      "suggestedTeam": {
+        "Salesforce CTA:": "Amulya N (Salesforce COE)",
+        "Service Cloud Lead:": "Jordan Lee (Agentforce CoE)",
+        "Integration SME:": "Sarah Jenkins (MuleSoft & API)"
+      }
+    }
+  },
+  "circle_metrics": {
+    "Financial Services": {
+      "draftProgress": "72%",
+      "activeBids": 1,
+      "reqsMapped": 84,
+      "compliance": "86%",
+      "smeGaps": 3,
+      "dueThisWeek": 1
+    },
+    "Healthcare": {
+      "draftProgress": "68%",
+      "activeBids": 1,
+      "reqsMapped": 64,
+      "compliance": "84%",
+      "smeGaps": 3,
+      "dueThisWeek": 1
+    },
+    "Retail": {
+      "draftProgress": "81%",
+      "activeBids": 1,
+      "reqsMapped": 52,
+      "compliance": "91%",
+      "smeGaps": 2,
+      "dueThisWeek": 1
+    },
+    "Enterprise": {
+      "draftProgress": "90%",
+      "activeBids": 1,
+      "reqsMapped": 37,
+      "compliance": "94%",
+      "smeGaps": 1,
+      "dueThisWeek": 0
+    },
+    "Testing": {
+      "draftProgress": "78%",
+      "activeBids": 1,
+      "reqsMapped": 48,
+      "compliance": "90%",
+      "smeGaps": 2,
+      "dueThisWeek": 1
+    },
+    "Platform": {
+      "draftProgress": "82%",
+      "activeBids": 1,
+      "reqsMapped": 76,
+      "compliance": "92%",
+      "smeGaps": 2,
+      "dueThisWeek": 1
+    },
+    "Data & Insights": {
+      "draftProgress": "74%",
+      "activeBids": 1,
+      "reqsMapped": 61,
+      "compliance": "88%",
+      "smeGaps": 3,
+      "dueThisWeek": 1
+    },
+    "Salesforce": {
+      "draftProgress": "85%",
+      "activeBids": 1,
+      "reqsMapped": 44,
+      "compliance": "93%",
+      "smeGaps": 1,
+      "dueThisWeek": 0
+    }
+  },
+  "owner_candidates": [
+    "Sarah Jenkins (Lead Solution Architect)",
+    "Michael Chang (Presales Operations)",
+    "Elena Rostova (Healthcare Data & FHIR CoE)",
+    "Priya Sharma (Retail Commerce & Search CoE)",
+    "Jordan Lee (Enterprise Cloud CoE)",
+    "Yasaswini K (Bid Lead)",
+    "Surendra Reddy (Track B Lead)",
+    "Amulya Molabanti (Identity & Governance)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GoldenSetQuestionSchema",
+  "description": "Standard schema for AI Proposal Assistant ground-truth evaluation benchmark.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the test question (e.g., GT-001)"
+      },
+      "rfp_id": {
+        "type": "string",
+        "description": "Identifier of the source RFP (e.g., RFP-HEALTHCARE-01, RFP-FIN-02)"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["Security & Compliance", "Cloud Architecture", "SLA & Support", "Pricing & Commercial", "Timeline & Milestones", "Negative / Refusal Test"],
+        "description": "Functional domain of the question"
+      },
+      "question": {
+        "type": "string",
+        "description": "The exact question asked by the solution architect or bid reviewer"
+      },
+      "expected_answer": {
+        "type": "string",
+        "description": "The ground-truth factual answer that the AI must produce"
+      },
+      "expected_source": {
+        "type": "string",
+        "description": "Exact document name, section number, and page citation"
+      },
+      "is_not_found": {
+        "type": "boolean",
+        "description": "Set to true for negative trap questions where the AI must refuse to answer and return 'not found in sources'"
+      },
+      "reviewer_notes": {
+        "type": "string",
+        "description": "Notes or corrections from pre-sales reviewers (Rukul / Prince)"
+      }
+    },
+    "required": ["id", "rfp_id", "category", "question", "expected_answer", "expected_source", "is_not_found"]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "section_title": "2.1 Security & Identity Management",
+  "requirements": [
+    {
+      "id": 1,
+      "requirement_text": "The system must support SSO via Azure Active Directory.",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 2,
+      "requirement_text": "All data must be encrypted at rest (AES-256) and in transit (TLS 1.3).",
+      "classification": "mandatory",
+      "domain": "Security"
+    },
+    {
+      "id": 3,
+      "requirement_text": "The vendor must provide a disaster recovery plan with RTO < 4 hours.",
+      "classification": "mandatory",
+      "domain": "Delivery"
+    },
+    {
+      "id": 4,
+      "requirement_text": "Integration with Microsoft Teams for notifications would be advantageous.",
+      "classification": "optional",
+      "domain": "Technical"
+    }
+  ],
+  "retrieved_evidence": [
+    {
+      "requirement_id": 1,
+      "results": [
+        {
+          "chunk_id": "C-042",
+          "proposal_id": "P-2025-017",
+          "section": "3.2 Security Architecture",
+          "relevance_score": 9,
+          "excerpt": "The platform enforces SSO via Azure AD using SAML 2.0 and OpenID Connect, requiring all users to authenticate before accessing any resource."
+        }
+      ]
+    },
+    {
+      "requirement_id": 2,
+      "results": [
+        {
+          "chunk_id": "C-078",
+          "proposal_id": "P-2024-009",
+          "section": "4.1 Data Protection",
+          "relevance_score": 8,
+          "excerpt": "All stored data is encrypted using AES-256 with keys managed in Azure Key Vault. All network traffic uses TLS 1.3 with HSTS enforcement."
+        }
+      ]
+    },
+    {
+      "requirement_id": 3,
+      "results": "INFORMATION NOT FOUND IN PAST WINS"
+    },
+    {
+      "requirement_id": 4,
+      "results": [
+        {
+          "chunk_id": "C-115",
+          "proposal_id": "P-2025-017",
+          "section": "5.0 Collaboration & Notifications",
+          "relevance_score": 7,
+          "excerpt": "Real-time event notifications are delivered directly to users via Microsoft Teams Adaptive Cards, ensuring zero inbox overhead."
+        }
+      ]
+    }
+  ]
+}
