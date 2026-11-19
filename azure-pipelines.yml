@@ -6,9 +6,9 @@ variables:
 
 stages:
 
-# =========================
+# ==================================
 # LINUX
-# =========================
+# ==================================
 - stage: Linux
   displayName: 'Linux Pipeline'
 
@@ -23,17 +23,49 @@ stages:
     - checkout: self
 
     - task: UsePythonVersion@0
+      displayName: 'Set up Python 3.11 - Linux'
       inputs:
-        versionSpec: '3.11'
-      displayName: 'Set up Python 3.11'
+        versionSpec: '$(pythonVersion)'
 
     - script: |
         python --version
+        python -m pip --version
         python -m pip install --upgrade pip
         python -m pip install pytest
         python -m pytest --version
-      displayName: 'Install Dependencies'
+        python -m pytest tests/ -v
+      displayName: 'Install Pytest and Run Tests - Linux'
+
+
+# ==================================
+# WINDOWS
+# ==================================
+- stage: Windows
+  displayName: 'Windows Pipeline'
+
+  dependsOn: Linux
+  condition: always()
+
+  jobs:
+  - job: Windows_Test
+    displayName: 'Windows - Build and Test'
+
+    pool:
+      vmImage: 'windows-latest'
+
+    steps:
+    - checkout: self
+
+    - task: UsePythonVersion@0
+      displayName: 'Set up Python 3.11 - Windows'
+      inputs:
+        versionSpec: '$(pythonVersion)'
 
     - script: |
+        python --version
+        python -m pip --version
+        python -m pip install --upgrade pip
+        python -m pip install pytest
+        python -m pytest --version
         python -m pytest tests/ -v
-      displayName: 'Run Python Tests - Linux'
+      displayName: 'Install Pytest and Run Tests - Windows'
