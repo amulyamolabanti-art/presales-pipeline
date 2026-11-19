@@ -1,0 +1,79 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  pythonVersion: '3.11'
+
+stages:
+
+# =========================
+# STAGE 1: BUILD
+# =========================
+- stage: Build
+  displayName: 'Build and Validate'
+
+  jobs:
+  - job: BuildJob
+    displayName: 'Build Python Application'
+
+    steps:
+    - checkout: self
+      displayName: 'Checkout Repository'
+
+    - task: UsePythonVersion@0
+      displayName: 'Use Python 3.11'
+      inputs:
+        versionSpec: '$(pythonVersion)'
+
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+      displayName: 'Install Dependencies'
+
+    - script: |
+        python -m compileall app.py src
+      displayName: 'Validate Python Code'
+
+    - script: |
+        echo "Build completed successfully"
+      displayName: 'Build Complete'
+
+
+# =========================
+# STAGE 2: TEST
+# =========================
+- stage: Test
+  displayName: 'Test Application'
+
+  dependsOn: Build
+  condition: succeeded()
+
+  jobs:
+  - job: TestJob
+    displayName: 'Run Python Tests'
+
+    steps:
+    - checkout: self
+      displayName: 'Checkout Repository'
+
+    - task: UsePythonVersion@0
+      displayName: 'Use Python 3.11'
+      inputs:
+        versionSpec: '$(pythonVersion)'
+
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest
+      displayName: 'Install Test Dependencies'
+
+    - script: |
+        python -m pytest tests/
+      displayName: 'Run Automated Tests'
+
+    - script: |
+        echo "Testing completed successfully"
+      displayName: 'Test Complete'
