@@ -6,9 +6,9 @@ variables:
 
 stages:
 
-# ==========================
-# LINUX
-# ==========================
+# ==========================================
+# LINUX PIPELINE
+# ==========================================
 - stage: Linux
   displayName: 'Linux Pipeline'
 
@@ -28,6 +28,7 @@ stages:
         versionSpec: '$(pythonVersion)'
 
     - script: |
+        python --version
         python -m pip install --upgrade pip
         python -m pip install pytest
         python -m pytest --version
@@ -38,9 +39,9 @@ stages:
       displayName: 'Run Python Tests - Linux'
 
 
-# ==========================
-# WINDOWS
-# ==========================
+# ==========================================
+# WINDOWS PIPELINE
+# ==========================================
 - stage: Windows
   displayName: 'Windows Pipeline'
 
@@ -63,6 +64,7 @@ stages:
         versionSpec: '$(pythonVersion)'
 
     - script: |
+        python --version
         python -m pip install --upgrade pip
         python -m pip install pytest
         python -m pytest --version
