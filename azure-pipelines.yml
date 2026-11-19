@@ -25,6 +25,7 @@ steps:
   displayName: 'Install Dependencies'
 
 - script: |
+    pthon -m pip install pytest
     python -m pytest || true
   displayName: 'Run Python Tests'
   continueOnError: true
