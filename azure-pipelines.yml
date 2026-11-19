@@ -1,63 +1,28 @@
 trigger:
-- main
+  - main
+  - develop
 
-variables:
-  pythonVersion: '3.11'
+strategy:
+  matrix:
+    linux:
+      imageName: 'ubuntu-latest'
+    windows:
+      imageName: 'windows-latest'
 
-stages:
+pool:
+  vmImage: $(imageName)
 
-# ==============================
-# LINUX
-# ==============================
-- stage: Linux
-  displayName: 'Linux Pipeline'
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.11'
+  displayName: 'Use Python 3.11'
 
-  jobs:
-  - job: Linux_Build
-    displayName: 'Linux - Build'
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install Dependencies'
 
-    pool:
-      vmImage: 'ubuntu-latest'
-
-    steps:
-    - checkout: self
-
-    - task: UsePythonVersion@0
-      displayName: 'Set up Python 3.11 - Linux'
-      inputs:
-        versionSpec: '$(pythonVersion)'
-
-    - script: |
-        python --version
-        python -m pip --version
-      displayName: 'Verify Python - Linux'
-
-
-# ==============================
-# WINDOWS
-# ==============================
-- stage: Windows
-  displayName: 'Windows Pipeline'
-
-  dependsOn: Linux
-  condition: always()
-
-  jobs:
-  - job: Windows_Build
-    displayName: 'Windows - Build'
-
-    pool:
-      vmImage: 'windows-latest'
-
-    steps:
-    - checkout: self
-
-    - task: UsePythonVersion@0
-      displayName: 'Set up Python 3.11 - Windows'
-      inputs:
-        versionSpec: '$(pythonVersion)'
-
-    - script: |
-        python --version
-        python -m pip --version
-      displayName: 'Verify Python - Windows'
+- script: |
+    python -c "import sys; print('Testing Python environment:', sys.version)"
+  displayName: 'Run Verification / Test'
