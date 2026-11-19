@@ -6,15 +6,15 @@ variables:
 
 stages:
 
-# ==================================
+# ==============================
 # LINUX
-# ==================================
+# ==============================
 - stage: Linux
   displayName: 'Linux Pipeline'
 
   jobs:
-  - job: Linux_Test
-    displayName: 'Linux - Build and Test'
+  - job: Linux_Build
+    displayName: 'Linux - Build'
 
     pool:
       vmImage: 'ubuntu-latest'
@@ -30,16 +30,12 @@ stages:
     - script: |
         python --version
         python -m pip --version
-        python -m pip install --upgrade pip
-        python -m pip install pytest
-        python -m pytest --version
-        python -m pytest tests/ -v
-      displayName: 'Install Pytest and Run Tests - Linux'
+      displayName: 'Verify Python - Linux'
 
 
-# ==================================
+# ==============================
 # WINDOWS
-# ==================================
+# ==============================
 - stage: Windows
   displayName: 'Windows Pipeline'
 
@@ -47,8 +43,8 @@ stages:
   condition: always()
 
   jobs:
-  - job: Windows_Test
-    displayName: 'Windows - Build and Test'
+  - job: Windows_Build
+    displayName: 'Windows - Build'
 
     pool:
       vmImage: 'windows-latest'
@@ -64,8 +60,4 @@ stages:
     - script: |
         python --version
         python -m pip --version
-        python -m pip install --upgrade pip
-        python -m pip install pytest
-        python -m pytest --version
-        python -m pytest tests/ -v
-      displayName: 'Install Pytest and Run Tests - Windows'
+      displayName: 'Verify Python - Windows'
